@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Calcio Seduto</title>
+    <meta name="description" content="Contattaci per informazioni, iscrizioni o per saperne di più su Calcio Seduto.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contatti - Calcio Seduto">
+    <meta property="og:description" content="Contattaci per informazioni, iscrizioni o per saperne di più su Calcio Seduto.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcioseduto.it/contatti.html">
+    <meta property="og:image" content="https://calcioseduto.it/Loghi/CALCIO_SEDUTO_LOGO.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        "name": "Calcio Seduto",
+        "description": "Club di calcio per bambini con disabilità motorie. Rompiamo le barriere e portiamo divertimento nello sport attraverso il calcio seduto.",
+        "url": "https://calcioseduto.it",
+        "logo": "https://calcioseduto.it/Loghi/CALCIO_SEDUTO_LOGO.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Federico Chopin 81",
+            "addressLocality": "Milano",
+            "postalCode": "20141",
+            "addressCountry": "IT"
+        },
+        "telephone": "+39-02-27208715",
+        "email": "segreteria.calcioseduto@gmail.com",
+        "sameAs": [
+            "https://www.instagram.com/calcioseduto_fatimatraccia/",
+            "https://www.asdfatimatraccia.it/"
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Preloader -->
+    <div class="preloader" id="preloader">
+        <img src="Loghi/CALCIO_SEDUTO_LOGO.png" alt="Calcio Seduto Logo" class="preloader__logo">
+    </div>
+
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav" role="navigation" aria-label="Menu principale">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <img src="Loghi/CALCIO_SEDUTO_LOGO.png" alt="Calcio Seduto Logo">
+                </a>
+
+                <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                </button>
+
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="storia.html" class="nav__link">La Nostra Storia</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">Galleria</a></li>
+                    <li class="nav__item"><a href="iscrivi.html" class="nav__link">Iscriviti</a></li>
+                    <!-- <li class="nav__item"><a href="testimonianze.html" class="nav__link">Testimonianze</a></li> -->
+                    <li class="nav__item"><a href="contatti.html" class="nav__link nav__link--active">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="contact__container">
+                <h1 class="page__title">Contattaci</h1>
+                <p class="contact__intro">
+                    Hai domande? Vuoi iscrivere tuo figlio? Desideri saperne di più? 
+                    Compila il modulo qui sotto e ti risponderemo il prima possibile!
+                </p>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mpwkzgvz" method="POST">
+                    <!-- Formspree Configuration -->
+                    <input type="hidden" name="_subject" value="Calcio Seduto Form">
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <div class="form-grid">
+                        <!-- Child's Name -->
+                        <div class="form-group">
+                            <label for="childName" class="form-label">
+                                Nome del Bambino <span class="form-required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="childName" 
+                                name="childName"
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="Es. Marco"
+                                oninvalid="this.setCustomValidity('Per favore, compila questo campo')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="form-error" id="childNameError"></span>
+                        </div>
+
+                        <!-- Child's Age -->
+                        <div class="form-group">
+                            <label for="childAge" class="form-label">
+                                Età del Bambino <span class="form-required">*</span>
+                            </label>
+                            <input 
+                                type="number" 
+                                id="childAge" 
+                                name="childAge"
+                                class="form-input" 
+                                min="5" 
+                                max="16" 
+                                required 
+                                aria-required="true"
+                                placeholder="Es. 8"
+                                oninvalid="this.setCustomValidity('Per favore, inserisci un\'età valida')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="form-error" id="childAgeError"></span>
+                        </div>
+
+                        <!-- Parent Name -->
+                        <div class="form-group">
+                            <label for="parentName" class="form-label">
+                                Nome del Genitore <span class="form-required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="parentName" 
+                                name="parentName"
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="Es. Maria Rossi"
+                                oninvalid="this.setCustomValidity('Per favore, compila questo campo')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="form-error" id="parentNameError"></span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Telefono <span class="form-required">*</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone"
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="Es. +39 333 1234567"
+                                oninvalid="this.setCustomValidity('Per favore, inserisci un numero di telefono valido')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group form-group--full">
+                            <label for="email" class="form-label">
+                                Email <span class="form-required">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                class="form-input" 
+                                required 
+                                aria-required="true"
+                                placeholder="Es. maria.rossi@email.com"
+                                oninvalid="this.setCustomValidity('Per favore, inserisci un indirizzo email valido')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="form-group form-group--full">
+                            <label for="notes" class="form-label">
+                                Messaggio o Note <span class="form-required">*</span>
+                            </label>
+                            <textarea 
+                                id="notes" 
+                                name="notes"
+                                class="form-textarea" 
+                                rows="5"
+                                required
+                                placeholder="Raccontaci qualcosa in più o facci delle domande..."
+                                oninvalid="this.setCustomValidity('Per favore, compila questo campo')"
+                                oninput="this.setCustomValidity('')"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Invia Richiesta</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Thank You Modal -->
+    <div class="thank-you-modal" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="thankYouTitle">
+        <div class="thank-you-modal__content">
+            <button class="thank-you-modal__close" id="thankYouClose" aria-label="Chiudi">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="thank-you-modal__icon">✓</div>
+            <h2 class="thank-you-modal__title" id="thankYouTitle">Grazie per averci contattato!</h2>
+            <p class="thank-you-modal__text">
+                Abbiamo ricevuto la tua richiesta e ti risponderemo al più presto. 
+                Nel frattempo, sentiti libero di esplorare il nostro sito per saperne di più su Calcio Seduto.
+            </p>
+            <button class="btn btn--primary" id="thankYouButton">Torna alla Home</button>
+        </div>
+    </div>
+
+    <!-- Footer with Contact Info -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__sponsors">
+                    <h3 class="footer__title">Partners</h3>
+                    <div class="footer__sponsors-grid">
+                        <img src="Loghi/Logo fondazione milan.png" alt="Fondazione Milan" loading="lazy">
+                        <img src="Loghi/logo fatima.png" alt="ASD Fatima Traccia" loading="lazy">
+                        <img src="Loghi/logo bcc.png" alt="BCC" loading="lazy">
+                        <img src="Loghi/logo sportler.png" alt="Sportler" loading="lazy">
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <h3 class="footer__title">Contatti</h3>
+                    <p class="footer__info">
+                        <strong>Indirizzo:</strong>
+                        Via Federico Chopin 81, 20141, Milano
+                    </p>
+                    <p class="footer__info">
+                        <br><strong>Telefono:</strong>
+                        <strong><u><a href="tel:0227208715">02 27208715</a></u></strong>
+                    </p>
+                    <p class="footer__info">
+                        <br><strong>Email:</strong>
+                        <strong><u><a href="mailto:segreteria.calcioseduto@gmail.com">segreteria.calcioseduto@gmail.com</a></u></strong>
+                        <strong><u><a href="mailto:info@asdfatimatraccia.it">info@asdfatimatraccia.it</a></u></strong>
+                    </p>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__title">Link Utili</h3>
+                    <ul class="footer__menu">
+                        <li><strong><u><a href="https://www.asdfatimatraccia.it/" target="_blank" rel="noopener noreferrer">ASD FatimaTraccia</a></u></strong></li>
+                        <li><strong><u><a href="https://www.bebevio.com/academy/" target="_blank" rel="noopener noreferrer">Bebe Vio Academy</a></u></strong></li>
+                        <li><strong><u><a href="https://www.instagram.com/calcioseduto_fatimatraccia/" target="_blank" rel="noopener noreferrer">Instagram</a></u></strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Calcio Seduto. Tutti i diritti riservati. <br> Costruito con passione per i ragazzi, l'inclusione e lo sport.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
