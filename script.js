@@ -300,8 +300,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
         
-        if (age < 5 || age > 16) {
-            showError(field, errorElement, 'L\'età deve essere tra 5 e 16 anni.');
+        if (age < 1 || age > 120) {
+            showError(field, errorElement, 'Per favore, inserisci un\'età valida.');
             return false;
         }
         
