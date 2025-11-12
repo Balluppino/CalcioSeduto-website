@@ -371,8 +371,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission validation
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // Validate all fields
         const isChildNameValid = validateRequired(fields.childName, errors.childName, 'Il nome del bambino');
         const isChildAgeValid = validateAge(fields.childAge, errors.childAge);
@@ -380,16 +378,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const isPhoneValid = validatePhone(fields.phone, errors.phone);
         const isEmailValid = validateEmail(fields.email, errors.email);
 
-        // If all valid, show thank you modal (in production, form would submit to FormSubmit)
+        // If all valid, allow form submission to Formspree
         if (isChildNameValid && isChildAgeValid && isParentNameValid && isPhoneValid && isEmailValid) {
-            showThankYouModal();
-            contactForm.reset();
+            // Form will submit naturally to Formspree
+            return true;
         } else {
-            // Focus on first error
+            // Prevent submission and focus on first error
+            e.preventDefault();
             const firstError = contactForm.querySelector('.error');
             if (firstError) {
                 firstError.focus();
             }
+            return false;
         }
     });
 })();
