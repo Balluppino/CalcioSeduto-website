@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // Expand
                 this.setAttribute('aria-expanded', 'true');
-                this.textContent = '✕ Chiudi';
+                this.textContent = 'Chiudi';
                 preview.style.display = 'none';
                 full.setAttribute('aria-hidden', 'false');
                 
@@ -614,6 +614,5 @@ function showThankYouModal() {
    CONSOLE MESSAGE
    Shows info message in browser console
    ============================================================================ */
-console.log('%c🎯 Calcio Seduto Website', 'color: #f2c14e; font-size: 20px; font-weight: bold;');
-console.log('%cBuilt with vanilla HTML, CSS, and JavaScript', 'color: #666; font-size: 12px;');
-console.log('%cNo frameworks, no dependencies, just passion for inclusion! ⚽', 'color: #666; font-size: 12px;');
+console.log('%cSito Web del Calcio Seduto', 'color: #f2c14e; font-size: 20px; font-weight: bold;');
+console.log('%cCostruito con HTML, CSS e JavaScript.', 'color: #666; font-size: 12px;');

@@ -1639,3 +1639,11 @@ ul, ol {
         page-break-inside: avoid;
     }
 }
+
+/* ============================================================================
+   RULES SECTION - Regolamento page styling
+   ============================================================================ */
+.rules-section {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    background-color: var(--color-gray-light);
+}
