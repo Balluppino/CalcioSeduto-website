@@ -21,7 +21,7 @@ Visit the official website: **[www.calcioseduto.it](https://calcioseduto.it)**
 | **About / Who We Are** | Emotional story of the project and founders. |
 | **Official Rules** | Link to the official seated-football rules (internal anchor on About page). |
 | **Gallery** | Photo gallery showcasing training sessions and events. |
-| **Sign Up** | Page for new registrations and interest forms. |
+| **Sign Up** | Validated form via [Formspree.io](https://formspree.io). |
 | **Press / Testimonials** | Articles, interviews and mentions about the project. |
 | **Contact** | Contact information, phone and emails. |
 | **Footer** | Partners, useful links and copyright notice. |
