@@ -673,8 +673,20 @@ ul, ol {
 }
 
 .video-section__container {
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.video-section__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .video-section__grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .video-section__title {
@@ -1140,7 +1152,7 @@ ul, ol {
 }
 
 .testimonial__full[aria-hidden="false"] {
-    max-height: 1000px;
+    max-height: 2500px;
     opacity: 1;
 }
 
